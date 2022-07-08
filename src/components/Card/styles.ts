@@ -64,7 +64,7 @@ export const PokemonTypeText = styled.Text`
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
-    color: ${theme.colors.background};
+    color: white;
     text-transform: capitalize;
   `}
 `;
@@ -93,7 +93,7 @@ export const PokemonName = styled.Text`
     line-height: 31px;
     margin-top: 5px;
     text-transform: capitalize;
-    color: ${theme.colors.background};
+    color: white;
   `}
 `;
 

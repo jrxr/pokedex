@@ -1,6 +1,6 @@
 export default {
   colors: {
-    background: '#FFF',
+    background: '#cc2e3a',
     text: '#050617',
     light_text: 'rgba(23, 23, 27, 0.6)',
     detail: '#747476',
