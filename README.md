@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="Pokedex" src=".github/cover.png" />
+    <img alt="Pokedex" src=".github/Cover.png" />
 </h1>
 
 <br>
