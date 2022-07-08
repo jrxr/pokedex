@@ -1,7 +1,3 @@
-<p align="center">
-  <img alt="Pokedex" src=".github/logo.png" width="160px">
-</p>
-
 <h1 align="center">
     <img alt="Pokedex" src=".github/Cover.png" />
 </h1>
