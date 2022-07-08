@@ -129,7 +129,7 @@ export function About() {
       <Load />
     </LoadingScreen>
   ) : (
-    <ScrollView style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1, backgroundColor: "white" }}>
       <Header type={pokemon.types[0].type.name}>
         <BackButton onPress={navigateBack}>
           <Feather name="chevron-left" size={24} color="#fff" />

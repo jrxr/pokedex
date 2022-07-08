@@ -11,7 +11,7 @@ export const LoadingScreen = styled.View`
 
 export const Container = styled.View`
   ${({ theme }) => css`
-    background: ${theme.colors.background};
+    background: #cc2e3a;
     flex: 1;
 
     position: relative;
@@ -22,8 +22,8 @@ export const Header = styled.ImageBackground`
   ${({ theme }) => css`
     width: ${windowWidth}px;
     margin-left: -20px;
-    height: 220px;
-    background: ${theme.colors.background};
+    height: 150px;
+    background: #cc2e3a;
   `}
 `;
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Alert, FlatList } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 import { Card } from '../../components/Card';
 import { Load } from '../../components/Load';
@@ -9,6 +10,7 @@ import pokeballImage from '../../assets/img/pokeball.png';
 import api from '../../services/api';
 
 import { LoadingScreen, Container, Header, Title } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 type PokemonType = {
   type: {
@@ -29,6 +31,8 @@ export interface Request {
 }
 
 export function Home() {
+  const { navigate } = useNavigation();
+
   const [load, setLoad] = useState<boolean>(true);
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
 
@@ -71,12 +75,19 @@ export function Home() {
     return { id, types };
   }
 
+  function handleNavigationPokemonDetail(pokemonId: number) {
+    navigate('About', {
+      pokemonId,
+    });
+  }
+
   return load ? (
     <LoadingScreen>
       <Load />
     </LoadingScreen>
   ) : (
     <>
+      <StatusBar style="dark" />
       <Container>
         <FlatList
           ListHeaderComponent={
@@ -92,7 +103,12 @@ export function Home() {
           keyExtractor={pokemon => pokemon.id.toString()}
           showsVerticalScrollIndicator={false}
           renderItem={({ item: pokemon }) => (
-            <Card data={pokemon} onPress={() => {}} />
+            <Card
+              data={pokemon}
+              onPress={() => {
+                handleNavigationPokemonDetail(pokemon.id);
+              }}
+            />
           )}
         />
       </Container>
