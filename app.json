@@ -25,6 +25,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000"
       }
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/jrxr/pokedex"
   }
 }
