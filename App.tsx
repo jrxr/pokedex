@@ -1,10 +1,16 @@
-import { Load } from "./src/components/Load";
-import { Welcome } from "./src/pages/Welcome";
+import { StatusBar } from 'expo-status-bar';
+
+import { ThemeProvider } from 'styled-components';
+
+import theme from './src/global/styles/theme';
+
+import { Welcome } from './src/pages/Welcome';
 
 export default function App() {
   return (
-    <Welcome />
+    <ThemeProvider theme={theme}>
+      <StatusBar backgroundColor="transparent" translucent />
+      <Welcome />
+    </ThemeProvider>
   );
 }
-
-
